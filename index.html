@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="myJavaScript.js"></script>
+    <title>Contact</title>
+</head>
+
+<body>
+    <h2> Contact us!</h2>
+    <div class="bigContainer">
+        <div class="messageContainer">
+            <button class="btnMessage" onclick=submit()>
+                <span>&#9993</span> Send a message
+            </button>
+        </div>
+        <div class="container">
+            <form action="">
+                <input type="email" class="userData" id="email" maxlength="30" placeholder="Email" required>
+                <input type="tel" class="userData" id="phone" maxlength="20" placeholder="0234-4567812"
+                    pattern="[0-9]{4}-[0-9]{7}" required>
+                <input type="text" class="userData" id="company" maxlength="20" placeholder="Company" required>
+                <textarea class="userData" rows="6" id="description" placeholder="Please tell us how can we help you?"
+                    required>
+                    </textarea>
+                <BUTTON id="btn" onclick=submitData() class="userData">Submit</BUTTON>
+                <BUTTON id="btn2" onclick=showData() class="userData">Show user data</BUTTON>
+            </form>
+        </div>
+    </div>
+    <div class="containerOutput" width="70%">
+        <fieldset>
+            <legend width="70%">
+                <h2>Data from Local Storage</h2>
+            </legend>
+            <table>
+                <tr>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Company</th>
+                    <th>Concern</th>
+                </tr>
+                <tr>
+                    <td id="showEmail"></td>
+                    <td id="showPhone"></td>
+                    <td id="showCompany"></td>
+                    <td id="showDescription"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+
+</body>
+
+</html>
